@@ -9,6 +9,13 @@ app.use(express.json());
 
 let notes = [];
 
+app.get("/", (req, res) => {
+  res.status(200).send("Backend OK");
+});
+
+
+
+
 app.get('/api/notes', (req, res) => {
   res.json(notes);
 });
